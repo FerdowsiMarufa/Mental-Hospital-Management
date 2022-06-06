@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="491.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bd.edu.seu.PatientController">
+   <children>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="148.0" layoutY="14.0" prefHeight="35.0" prefWidth="411.0" text="Circle Mental Hospital" textFill="#290936ba">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <GridPane layoutY="84.0" prefHeight="319.0" prefWidth="395.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="139.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="272.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label prefHeight="33.0" prefWidth="75.0" text="First Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="33.0" prefWidth="127.0" text="Doctor ID" GridPane.rowIndex="4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="44.0" prefWidth="132.0" text="Contact Number" GridPane.rowIndex="5">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="33.0" prefWidth="75.0" text="Last Name" GridPane.rowIndex="1">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="107.0" text="Address" GridPane.rowIndex="2">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="addressField" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="LnameField" prefHeight="32.0" prefWidth="235.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="FnameField" prefHeight="32.0" prefWidth="235.0" GridPane.columnIndex="1" />
+            <TextField fx:id="contactField" prefHeight="32.0" prefWidth="235.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="doctorIDField" prefHeight="32.0" prefWidth="235.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label prefHeight="33.0" prefWidth="75.0" text="Room" GridPane.rowIndex="8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="roomField" prefHeight="32.0" prefWidth="235.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Label prefHeight="36.0" prefWidth="158.0" text="Illness" GridPane.rowIndex="3">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="illnessField" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="genderField" editable="false" prefHeight="32.0" prefWidth="235.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="bloodgroupField" editable="false" prefHeight="32.0" prefWidth="235.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <MenuButton mnemonicParsing="false" text="Gender" GridPane.rowIndex="6">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleMaleAction" text="Male" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleFemaleAction" text="Female" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleOtherAction" text="Others" />
+               </items>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" text="Blood Group" GridPane.rowIndex="7">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#handleApAction" text="A+" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleAnAction" text="A-" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleBpAction" text="B+" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleBnAction" text="B-" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleABpAction" text="AB+" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleABnAction" text="AB-" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleOpAction" text="O+" />
+                  <MenuItem mnemonicParsing="false" onAction="#handleOnAction" text="O-" />
+               </items>
+            </MenuButton>
+         </children>
+      </GridPane>
+      <TableView fx:id="patientTableView" layoutX="692.0" layoutY="67.0" onMouseClicked="#handleSelectAction" prefHeight="420.0" prefWidth="318.0">
+         <columns>
+            <TableColumn fx:id="pidColumn" prefWidth="66.0" text="ID" />
+            <TableColumn fx:id="pnameColumn" minWidth="0.0" prefWidth="113.0" text="Name" />
+            <TableColumn fx:id="pdocColumn" prefWidth="75.0" text="Doctor's ID" />
+            <TableColumn fx:id="proomCol" prefWidth="75.0" text="Room" />
+         </columns>
+      </TableView>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="740.0" layoutY="40.0" prefHeight="25.0" prefWidth="234.0" text="Admitted Patient List" textFill="#04010aba">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="314.0" layoutY="430.0" mnemonicParsing="false" onAction="#handleAdmitAction" prefHeight="33.0" prefWidth="75.0" text="Admit" textFill="#154d44">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="131.0" layoutY="430.0" mnemonicParsing="false" onAction="#handleReleaseAction" prefHeight="35.0" prefWidth="75.0" text="Release" textFill="#263e6b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="221.0" layoutY="431.0" mnemonicParsing="false" onAction="#handleCancelAction" prefHeight="33.0" prefWidth="75.0" text="Cancel" textFill="#7c1919">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="14.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleHomeAction" prefHeight="33.0" prefWidth="60.0" text="Home" textFill="#49216b">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="54.0" prefHeight="25.0" prefWidth="234.0" text="Employee List" textFill="#04010aba">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <TableView fx:id="employeeTableView" layoutX="407.0" layoutY="80.0" prefHeight="395.0" prefWidth="275.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="54.0" text="ID" />
+          <TableColumn fx:id="nameColumn" prefWidth="125.0" text="Name" />
+            <TableColumn fx:id="jobColumn" prefWidth="97.0" text="Job Type" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
